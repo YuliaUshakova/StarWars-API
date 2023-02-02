@@ -1,0 +1,62 @@
+   
+@font-face {
+    font-family: 'star_jedi_hollowregular';
+    src: url('starjhol-webfont.woff2') format('woff2'),
+         url('starjhol-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+button {
+    width: 20%;
+    padding: 15px;
+    margin: 5px;
+    font-size: 2.0rem;
+    border-radius: 5px;
+
+}
+ul, p, .main-title {
+    font-family: 'star_jedi_hollowregular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 20%;
+    opacity: 0.8;
+
+}
+.main-title {
+    font-size: 50px;
+    text-align: center;
+}
+nav{
+    width: 50%;
+    display: flex;
+    align-items: space-around;
+    margin: auto;
+   
+}
+#output {
+    width: 50%;
+    display: flex;
+    /* align-self: center; */
+    justify-content: center;
+    margin: auto;
+}
