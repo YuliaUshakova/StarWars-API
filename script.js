@@ -44,7 +44,7 @@ data.results.forEach(item => {
                 
                         <h2 class="item-title">${item.name}</h2>
                         <h3>Release date: ${item.release_date}</h3>
-                        <h3>: ${item.}</h3>
+                        <h3>: ${item.model}</h3>
                         </div>
                     `
                 })
@@ -55,9 +55,11 @@ data.results.forEach(item => {
                             output += `
                                 <div class="item-card">
                         
-                                <h2 class="item-title">${item.title}</h2>
-                                <h3>Release date: ${item.release_date}</h3>
-                                <h3>Producer: ${item.producer}</h3>
+                                <h2 class="item-title">${item.name}</h2>
+                                <h3>Model: ${item.model}</h3>
+                                <h3>Manufacturer: ${item.manufacturer}</h3>
+                                <h4>Cost in credits: ${item.cost_in_credits}</h4>
+                                <h4>Length: ${item.length}</h4>
                                 </div>
                             `
                         })
@@ -68,9 +70,12 @@ data.results.forEach(item => {
                                     output += `
                                         <div class="item-card">
                                 
-                                        <h2 class="item-title">${item.title}</h2>
-                                        <h3>Release date: ${item.release_date}</h3>
-                                        <h3>Producer: ${item.producer}</h3>
+                                        <h2 class="item-title">${item.name}</h2>
+                                        <h3>Rotation period: ${item.rotation_period}</h3>
+                                        <h3>Orbital period: ${item.orbital_period}</h3>
+                                        <h4>Diameter: ${item.diameter}</h4>
+                                        <button id="films__button">Films</button>
+                                        <button>Residents</button>
                                         </div>
                                     `
                                 })
@@ -81,9 +86,9 @@ data.results.forEach(item => {
                                             output += `
                                                 <div class="item-card">
                                         
-                                                <h2 class="item-title">${item.title}</h2>
-                                                <h3>Release date: ${item.release_date}</h3>
-                                                <h3>Producer: ${item.producer}</h3>
+                                                <h2 class="item-title">Species: ${item.name}</h2>
+                                                <h3>Classification: ${item.classification}</h3>
+                                                <h3>Designation: ${item.designation}</h3>
                                                 </div>
                                             `
                                         })
