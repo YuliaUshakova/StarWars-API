@@ -9,16 +9,17 @@ async function asyncFetch(value) {
 
 function showOutput(data, value) {
     let output = "";
-    console.log(data.results);
-
+   
     if (value === 'films') {
 data.results.forEach(item => {
     output += `
         <div class="item-card">
-
+      
         <h2 class="item-title">${item.title}</h2>
         <h3>Release date: ${item.release_date}</h3>
         <h3>Producer: ${item.producer}</h3>
+        <h4>Characters: ${item.title.characters}</h4>
+
         </div>
     `
 })
@@ -86,7 +87,7 @@ data.results.forEach(item => {
                                             output += `
                                                 <div class="item-card">
                                         
-                                                <h2 class="item-title">Species: ${item.name}</h2>
+                                                <h2 class="item-title"> ${item.name}</h2>
                                                 <h3>Classification: ${item.classification}</h3>
                                                 <h3>Designation: ${item.designation}</h3>
                                                 </div>
