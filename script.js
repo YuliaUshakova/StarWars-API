@@ -9,20 +9,18 @@ async function asyncFetch(value) {
 
 function showOutput(data, value) {
     let output = "";
-   
+
     if (value === 'films') {
-data.results.forEach(item => {
-    output += `
+        data.results.forEach(item => {
+            output += `
         <div class="item-card">
-      
         <h2 class="item-title">${item.title}</h2>
         <h3>Release date: ${item.release_date}</h3>
         <h3>Producer: ${item.producer}</h3>
         <h4>Characters: ${item.title.characters}</h4>
-
         </div>
     `
-})
+        })
     }
 
     if (value === 'people') {
@@ -36,11 +34,11 @@ data.results.forEach(item => {
                 </div>
             `
         })
-            }
+    }
 
-            if (value === 'spaceships') {
-                data.results.forEach(item => {
-                    output += `
+    if (value === 'spaceships') {
+        data.results.forEach(item => {
+            output += `
                         <div class="item-card">
                 
                         <h2 class="item-title">${item.name}</h2>
@@ -48,12 +46,12 @@ data.results.forEach(item => {
                         <h3>: ${item.model}</h3>
                         </div>
                     `
-                })
-                    }
+        })
+    }
 
-                    if (value === 'vehicles') {
-                        data.results.forEach(item => {
-                            output += `
+    if (value === 'vehicles') {
+        data.results.forEach(item => {
+            output += `
                                 <div class="item-card">
                         
                                 <h2 class="item-title">${item.name}</h2>
@@ -63,28 +61,26 @@ data.results.forEach(item => {
                                 <h4>Length: ${item.length}</h4>
                                 </div>
                             `
-                        })
-                            }
+        })
+    }
 
-                            if (value === 'planets') {
-                                data.results.forEach(item => {
-                                    output += `
+    if (value === 'planets') {
+        data.results.forEach(item => {
+            output += `
                                         <div class="item-card">
                                 
                                         <h2 class="item-title">${item.name}</h2>
                                         <h3>Rotation period: ${item.rotation_period}</h3>
                                         <h3>Orbital period: ${item.orbital_period}</h3>
                                         <h4>Diameter: ${item.diameter}</h4>
-                                        <button id="films__button">Films</button>
-                                        <button>Residents</button>
                                         </div>
                                     `
-                                })
-                                    }
+        })
+    }
 
-                                    if (value === 'species') {
-                                        data.results.forEach(item => {
-                                            output += `
+    if (value === 'species') {
+        data.results.forEach(item => {
+            output += `
                                                 <div class="item-card">
                                         
                                                 <h2 class="item-title"> ${item.name}</h2>
@@ -92,8 +88,8 @@ data.results.forEach(item => {
                                                 <h3>Designation: ${item.designation}</h3>
                                                 </div>
                                             `
-                                        })
-                                            }
+        })
+    }
 
 
     results.innerHTML = output;
@@ -103,3 +99,5 @@ document.querySelector('#buttons').addEventListener('click', e => {
     asyncFetch(e.target.textContent.trim().toLowerCase());
 
 });
+
+
